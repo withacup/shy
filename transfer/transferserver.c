@@ -164,7 +164,7 @@ int main(int argc, char **argv)
             exit(EXIT_FAILURE);
     printf("here6");
     }
-    fprintf(stdout, "Accept peer --> %s\n", inet_ntoa(cli_addr.sin_addr));
+    // fprintf(stdout, "Accept peer --> %s\n", inet_ntoa(cli_addr.sin_addr));
     printf("here1");
 
     sprintf(file_size, "%d", file_stat.st_size);
