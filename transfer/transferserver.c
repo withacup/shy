@@ -188,14 +188,15 @@ int main(int argc, char **argv)
     /* Sending file data */
     while((read_bytes = read(filefd, buffer, BUFSIZE)) > 0 && (remain_data > 0)) 
     {
-        printf("Sending %d data..", len);
+        printf("Sending %d data\n", read_bytes);
         if (sent_bytes = send(newsockfd, buffer, BUFSIZE, 0) <= 0) 
         {
             printf("Finished by 0 bytes from send function");
             break;
         }
         remain_data -= sent_bytes;
-        printf("Remain %d data..", remain_data);
+        bzero(buffer, BUFSIZE);
+        printf("Remain %d data\n", remain_data);
 
     }
     // while (((sent_bytes = sendfile(newsockfd, filefd, &offset, BUFSIZE)) > 0) && (remain_data > 0))
