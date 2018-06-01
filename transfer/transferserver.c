@@ -189,7 +189,7 @@ int main(int argc, char **argv)
     while((read_bytes = read(filefd, buffer, BUFSIZE)) > 0 && (remain_data > 0)) 
     {
         printf("Sending %d data\n", read_bytes);
-        if (sent_bytes = send(newsockfd, buffer, BUFSIZE, 0) <= 0) 
+        if (sent_bytes = send(newsockfd, buffer, BUFSIZE, 0) <= 0 || read_bytes < BUFSIZE) 
         {
             printf("Finished by 0 bytes from send function");
             break;
