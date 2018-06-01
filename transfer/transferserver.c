@@ -89,7 +89,7 @@ int main(int argc, char **argv)
     struct stat file_stat;
     int offset;
     int remain_data;
-
+    printf("here1");
     /* Create server socket */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd == -1)
@@ -101,6 +101,7 @@ int main(int argc, char **argv)
 
     if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &(int){ 1 }, sizeof(int)) < 0)
         error("setsockopt(SO_REUSEADDR) failed");
+    printf("here1");
 
     /* Zeroing server_addr struct */
     memset(&server_addr, 0, sizeof(server_addr));
@@ -109,6 +110,7 @@ int main(int argc, char **argv)
     // inet_pton(AF_INET, SERVER_ADDRESS, &(server_addr.sin_addr));
     server_addr.sin_addr.s_addr = INADDR_ANY;
     server_addr.sin_port = htons(portno);
+    printf("here1");
 
     /* Bind */
     if ((bind(sockfd, (struct sockaddr *)&server_addr, sizeof(struct sockaddr))) == -1)
@@ -117,6 +119,7 @@ int main(int argc, char **argv)
 
             exit(EXIT_FAILURE);
     }
+    printf("here1");
 
     /* Listening to incoming connections */
     if ((listen(sockfd, 5)) == -1)
@@ -125,6 +128,7 @@ int main(int argc, char **argv)
 
             exit(EXIT_FAILURE);
     }
+    printf("here1");
 
     filefd = open(filename, S_IRUSR | S_IWUSR);
     if (filefd == -1)
@@ -133,6 +137,7 @@ int main(int argc, char **argv)
 
             exit(EXIT_FAILURE);
     }
+    printf("here1");
 
     /* Get file stats */
     if (fstat(filefd, &file_stat) < 0)
@@ -141,6 +146,7 @@ int main(int argc, char **argv)
 
             exit(EXIT_FAILURE);
     }
+    printf("here1");
 
     fprintf(stdout, "File Size: \n%d bytes\n", file_stat.st_size);
 
@@ -154,6 +160,7 @@ int main(int argc, char **argv)
             exit(EXIT_FAILURE);
     }
     fprintf(stdout, "Accept peer --> %s\n", inet_ntoa(cli_addr.sin_addr));
+    printf("here1");
 
     sprintf(file_size, "%d", file_stat.st_size);
 
@@ -166,6 +173,7 @@ int main(int argc, char **argv)
           exit(EXIT_FAILURE);
     }
 
+    printf("here1");
     fprintf(stdout, "Server sent %d bytes for the size\n", len);
 
     offset = 0;
@@ -173,6 +181,7 @@ int main(int argc, char **argv)
     /* Sending file data */
     while (((sent_bytes = sendfile(newsockfd, filefd, &offset, BUFSIZE)) > 0) && (remain_data > 0))
     {
+    printf("file");
             fprintf(stdout, "1. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
             remain_data -= sent_bytes;
             fprintf(stdout, "2. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
