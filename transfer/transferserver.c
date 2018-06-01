@@ -154,6 +154,7 @@ int main(int argc, char **argv)
     printf("here2");
     /* Accepting incoming peers */
     newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &sock_len);
+    printf("here3");
     if (newsockfd == -1)
     {
             fprintf(stderr, "Error on accept --> %s", strerror(errno));
