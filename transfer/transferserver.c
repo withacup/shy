@@ -84,7 +84,7 @@ int main(int argc, char **argv)
     ssize_t len;
     struct sockaddr_in server_addr, cli_addr;
     int filefd;
-    int sent_bytes = 0;
+    int sent_bytes = 0, read_bytes = 0;
     char file_size[256];
     struct stat file_stat;
     int offset;
@@ -183,14 +183,28 @@ int main(int argc, char **argv)
 
     offset = 0;
     remain_data = file_stat.st_size;
+
+    char buffer[BUFSIZE];
     /* Sending file data */
-    while (((sent_bytes = sendfile(newsockfd, filefd, &offset, BUFSIZE)) > 0) && (remain_data > 0))
+    while((read_bytes = read(filefd, buffer, BUFSIZE)) > 0 && (remain_data > 0)) 
     {
-    printf("file");
-            fprintf(stdout, "1. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
-            remain_data -= sent_bytes;
-            fprintf(stdout, "2. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
+        printf("Sending %d data..", len);
+        if (sent_bytes = send(newsockfd, buffer, BUFSIZE, 0) <= 0) 
+        {
+            printf("Finished by 0 bytes from send function");
+            break;
+        }
+        remian_data -= sent_bytes;
+        printf("Remain %d data..", remian_data);
+
     }
+    // while (((sent_bytes = sendfile(newsockfd, filefd, &offset, BUFSIZE)) > 0) && (remain_data > 0))
+    // {
+    // printf("file");
+    //         fprintf(stdout, "1. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
+    //         remain_data -= sent_bytes;
+    //         fprintf(stdout, "2. Server sent %d bytes from file's data, offset is now : %d and remaining data = %d\n", sent_bytes, offset, remain_data);
+    // }
 
     close(newsockfd);
     close(sockfd);
