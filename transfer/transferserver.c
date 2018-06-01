@@ -157,9 +157,12 @@ int main(int argc, char **argv)
     printf("here3");
     if (newsockfd == -1)
     {
+    printf("here4");
             fprintf(stderr, "Error on accept --> %s", strerror(errno));
+    printf("here5");
 
             exit(EXIT_FAILURE);
+    printf("here6");
     }
     fprintf(stdout, "Accept peer --> %s\n", inet_ntoa(cli_addr.sin_addr));
     printf("here1");
