@@ -1,0 +1,44 @@
+{
+    "tests": [
+        {
+            "output": {
+                "client_returncode": 1,
+                "server_console": "\nERROR on binding socket\n: Address already in use\n",
+                "passfail": "failed",
+                "server_returncode": 1,
+                "client_console": "ERROR connecting: Connection refused\n"
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_nkuomzrc/gios.py\", line 268, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 71, in test_server\n    self.converse(['./echoserver', '-p', self.port, '-m', '5'], ['./bvtechoclient', '-p', self.port, '-s', 'localhost', '-m', msg])\n  File \"/home/vmuser_nkuomzrc/gios.py\", line 205, in converse\n    self.assertIsNone(self.p_server.poll(), \"The server process exited unexpectedly. (exit code {})\".format(self.p_server.poll()))\nAssertionError: The server process exited unexpectedly. (exit code 1)\n",
+            "description": "Tests that the server echos the message sent from the client"
+        },
+        {
+            "output": {
+                "client_returncode": 0,
+                "passfail": "passed",
+                "client_console": "gcc -o echoclient -Wall -Werror --std=gnu99 -g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security echoclient.c -lpthread -static-libasan\n"
+            },
+            "traceback": "",
+            "description": "Tests that the client compiles"
+        },
+        {
+            "output": {
+                "server_console": "gcc -o echoserver -Wall -Werror --std=gnu99 -g3 -fsanitize=address -fno-omit-frame-pointer -Wno-format-security echoserver.c -lpthread -static-libasan\n",
+                "passfail": "passed",
+                "server_returncode": 0
+            },
+            "traceback": "",
+            "description": "Tests that the server compiles"
+        },
+        {
+            "output": {
+                "client_returncode": 0,
+                "server_console": "",
+                "passfail": "passed",
+                "server_returncode": null,
+                "client_console": ""
+            },
+            "traceback": "",
+            "description": "Tests that the client prints the message sent from the server"
+        }
+    ]
+}
