@@ -151,6 +151,7 @@ int main(int argc, char **argv)
     fprintf(stdout, "File Size: \n%d bytes\n", file_stat.st_size);
 
     sock_len = sizeof(struct sockaddr_in);
+    printf("here2");
     /* Accepting incoming peers */
     newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &sock_len);
     if (newsockfd == -1)
