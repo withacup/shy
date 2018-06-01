@@ -194,6 +194,7 @@ int main(int argc, char **argv)
             printf("Finished by 0 bytes from send function");
             break;
         }
+        printf("%d", sent_bytes);
         remain_data -= sent_bytes;
         bzero(buffer, BUFSIZE);
         printf("Remain %d data\n", remain_data);
