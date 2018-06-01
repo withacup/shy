@@ -117,7 +117,7 @@ int main(int argc, char **argv)
     /* Receiving file size */
     recv(client_socket, buffer, BUFSIZE, 0);
     file_size = atoi(buffer);
-    //fprintf(stdout, "\nFile size : %d\n", file_size);
+    fprintf(stdout, "\nFile size : %d\n", file_size);
 
     received_file = fopen(filename, "w");
     if (received_file == NULL)
