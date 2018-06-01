@@ -194,8 +194,8 @@ int main(int argc, char **argv)
             printf("Finished by 0 bytes from send function");
             break;
         }
-        remian_data -= sent_bytes;
-        printf("Remain %d data..", remian_data);
+        remain_data -= sent_bytes;
+        printf("Remain %d data..", remain_data);
 
     }
     // while (((sent_bytes = sendfile(newsockfd, filefd, &offset, BUFSIZE)) > 0) && (remain_data > 0))
