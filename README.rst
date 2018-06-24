@@ -1,4 +1,4 @@
-### 一轮：
+# Phone interview：
 
 * Implement hashmap
 
@@ -35,7 +35,7 @@ e.g.[ [4,5], [9,4], [11,9], [5, 1] ] -> [ [11,9], [9, 4], [4,5], [5, 1] ]
 这题之前没⻅过，我⽤hashmap做的，原题[11,9]⽤的是java⾥⾯的pair存
 的，edge case有点多，花了点时间
 
-### 二轮：
+# second round：
 * https://leetcode.com/problems/third-maximum-number/description/
 * https://leetcode.com/problems/climbing-stairs/description/
 * what's the difference between java and python?
