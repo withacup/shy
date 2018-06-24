@@ -1,4 +1,5 @@
-###一轮：
+### 一轮：
+
 * Implement hashmap
 
 * https://leetcode.com/problems/reverse-string/description/
@@ -34,7 +35,7 @@ e.g.[ [4,5], [9,4], [11,9], [5, 1] ] -> [ [11,9], [9, 4], [4,5], [5, 1] ]
 这题之前没⻅过，我⽤hashmap做的，原题[11,9]⽤的是java⾥⾯的pair存
 的，edge case有点多，花了点时间
 
-###二轮：
+### 二轮：
 * https://leetcode.com/problems/third-maximum-number/description/
 * https://leetcode.com/problems/climbing-stairs/description/
 * what's the difference between java and python?
@@ -62,11 +63,9 @@ Find the shortest subarray in a list of integers which has a sum over the target
       解释什么是dead lock, 如何防止或者减少deadlock. 解释right join 和 left join有啥区别。
       设计一个order management system, 怎么吧order提交到交易所，怎么处理交易所根据这个order返回的数据, 问的很笼统，不知到对方想问什么。.本文原创自1point3acres论坛
 
-.留学论坛-一亩-三分地
 2)  Longest non repeating char. 
      Top K most frequent elements. 都是LC原题。
      问你project中用到过哪些open source framework, 详细介绍其中一个framework 的用途以及它的优缺点。
-. 一亩-三分-地，独家发布
 
 
 3） 有一个class, its constructor takes in a list of integers。然后要求实现constructor和一个函数：给两个数A,B，return the number of all elements in the list of integers between (A,B), 但要求O(1)时间复杂度。可以利用constructor做任何preprocessing, proprocessing没有复杂度限制。
@@ -74,9 +73,10 @@ Find the shortest subarray in a list of integers which has a sum over the target
 
 4）实现一个函数：给两串字母。怎么通过 stack pop或者push来吧第一串字母转化成第二串。比如： ABC, CBA 就是 push A, push B, push C, pop pop pop. 若无法转化返回exception。
      问为啥要离开目前公司来高盛，连续追问为啥是高盛，为啥是这个部门，为啥要离开现在岗位。
-. more info on 1point3acres
-5）一道BST的简单题，涉及到BFS, 具体记不清了。 来源一亩.三分地论坛. 
-     LRU Cache.. 围观我们@1point 3 acres
+
+5）一道BST的简单题，涉及到BFS, 具体记不清了。 
+     LRU Cache.. 
+     
      设计tiny url.怎么处理恶意访问, 比如给个黄色网站，比如invalid url. 怎么实现 rate limiter 来控制machine generated request。
 
 判断二叉树是不是BST. Waral 博客有更多文章,
