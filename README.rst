@@ -1,42 +1,49 @@
 ###一轮：
-Implement hashmap
-https://leetcode.com/problems/reverse-string/description/
-https://leetcode.com/problems/kth-largest-element-in-an-array/description/
-https://leetcode.com/problems/string-to-integer-atoi/description/
-Second minimum number in array
-https://leetcode.com/problems/shortest-word-distance/description/
+* Implement hashmap
 
-https://leetcode.com/problems/linked-list-cycle/description/
-https://leetcode.com/problems/shortest-word-distance-iii/description/
+* https://leetcode.com/problems/reverse-string/description/
 
-given a sorted array, rotated at a pivot, find the maximum element
+* https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+
+* https://leetcode.com/problems/string-to-integer-atoi/description/
+
+* Second minimum number in array
+
+* https://leetcode.com/problems/shortest-word-distance/description/
+
+* https://leetcode.com/problems/linked-list-cycle/description/
+
+* https://leetcode.com/problems/shortest-word-distance-iii/description/
+
+* given a sorted array, rotated at a pivot, find the maximum element
+
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 
-what is encapsulation(封装)
+* what is encapsulation(封装)
 
-https://leetcode.com/problems/first-unique-character-in-a-string/description/
-https://leetcode.com/problems/minimum-path-sum/description/
+* https://leetcode.com/problems/first-unique-character-in-a-string/description/
+* https://leetcode.com/problems/minimum-path-sum/description/
 
-大部分时间在问general behavior question。 比如要是组里有人不工作怎么办， 工作如果没法在deadline之前完成怎么办。tech question：1. 给了两个表格关于资金流动的，问怎么把所有的情况改成最少的交易次数。2. 问怎么找到一个Manager 管理的下面所有层的employees。
+* 大部分时间在问general behavior question。 比如要是组里有人不工作怎么办， 工作如果没法在deadline之前完成怎么办。tech question：1. 给了两个表格关于资金流动的，问怎么把所有的情况改成最少的交易次数。2. 问怎么找到一个Manager 管理的下面所有层的employees。
 
-给学生名字和成绩，求最高平均分。好久没有面试，生疏了许多，最后貌似是 maintain 了两个 HashMap 做出来的……
+* 给学生名字和成绩，求最高平均分。好久没有面试，生疏了许多，最后貌似是 maintain 了两个 HashMap 做出来的……
 找第二个最小的数字 我直接问面试官O(N) 扫两遍做行吗 面试官说可以 然后记得最开始问清楚可不可以有duplicate 规定不一样 我的是允许有 比如 -3 -3 2 返回的是-3
 
- Find and sort Continuous path,
+* Find and sort Continuous path,
 e.g.[ [4,5], [9,4], [11,9], [5, 1] ] -> [ [11,9], [9, 4], [4,5], [5, 1] ]
 这题之前没⻅过，我⽤hashmap做的，原题[11,9]⽤的是java⾥⾯的pair存
 的，edge case有点多，花了点时间
 
 ###二轮：
-https://leetcode.com/problems/third-maximum-number/description/
-what's the difference between java and python?
+* https://leetcode.com/problems/third-maximum-number/description/
+* https://leetcode.com/problems/climbing-stairs/description/
+* what's the difference between java and python?
 
-后边问了简单的转置，矩阵相乘这种基础题，又问了reverse string。
+* 后边问了简单的转置，矩阵相乘这种基础题，又问了reverse string。
 
-https://leetcode.com/problems/climbing-stairs/description/
-前两道给了经典题目，一个跨三步的爬楼梯问题，一个求 10^n 的题，飞快做完之后只用了半个小时，然后给我加了一道让实现 HashMap ……也算经典题目了，面经里见过，但并没有去了解，磕磕绊绊一边沟通一边写，到最后也没做出来，其实就是不了解 Hash 的概念。做完一度以为挂了，结果今天给了回复，下一轮 bluejeans。
+* 前两道给了经典题目，一个跨三步的爬楼梯问题，一个求 10^n 的题，飞快做完之后只用了半个小时，然后给我加了一道让实现 HashMap ……也算经典题目了，面经里见过，但并没有去了解，磕磕绊绊一边沟通一边写，到最后也没做出来，其实就是不了解 Hash 的概念。做完一度以为挂了，结果今天给了回复，下一轮 bluejeans。
 
-，比如你遇到的challenge呀，或者你做过的最interesting的东西是啥呀
+* 遇到的challenge呀，或者你做过的最interesting的东西是啥呀
 
 ###Onsite:
 implement hashmap
