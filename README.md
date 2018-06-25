@@ -46,7 +46,7 @@ e.g.[ [4,5], [9,4], [11,9], [5, 1] ] -> [ [11,9], [9, 4], [4,5], [5, 1] ]
 
 * 遇到的challenge呀，或者你做过的最interesting的东西是啥呀
 
-###Onsite:
+# Onsite:
 implement hashmap
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 https://leetcode.com/problems/trapping-rain-water/description/
@@ -89,5 +89,5 @@ Trouble shooting和design：
 一个网站，可以返回用户查询的data。这个网站原来工作正常，现在突然变得非常慢，说出所有可能的原因（具体记不得了，大意）。
 设计一个文件系统（没搞懂面试官想问什么，反正他是这么说的。。。）
 
-###奇葩：
+# 奇葩：
 http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=418101&highlight=%B8%DF%CA%A2
